@@ -1,49 +1,152 @@
+/* Google font */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f7f7f7;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
-header {
-  background: #222;
-  color: #fff;
-  padding: 50px 20px;
+h1, h2, h3 {
+  font-weight: 600;
 }
 
 .highlight {
   color: #00d4ff;
 }
 
+a {
+  text-decoration: none;
+  color: #00d4ff;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ff4c60;
+}
+
+.hero {
+  background: linear-gradient(135deg, #111, #222);
+  padding: 100px 20px;
+  text-align: center;
+}
+
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   background: #00d4ff;
-  color: #222;
-  text-decoration: none;
+  color: #000;
   border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.project {
-  background: #fff;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-footer {
-  background: #222;
+.btn:hover {
+  background: #ff4c60;
   color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background: #1a1a1a;
   padding: 10px 0;
-  margin-top: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container a {
+  color: #eaeaea;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.nav-container a:hover {
+  color: #00d4ff;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+.dark {
+  background: #1a1a1a;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skill {
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  background: #00d4ff;
+  color: #000;
+}
+
+/* Project cards */
+.project-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: #333;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 20px 0;
+  font-size: 0.9em;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+.fade-in.delay2 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
