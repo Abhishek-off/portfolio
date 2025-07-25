@@ -10,9 +10,7 @@
 
 * { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -34,16 +32,9 @@ h1, h2, h3 {
   line-height: 1.2;
 }
 
-a {
-  text-decoration: none;
-  color: var(--accent);
-  transition: 0.25s;
-}
-a:hover {
-  color: var(--accent2);
-}
+a { text-decoration: none; color: var(--accent); transition: 0.25s; }
+a:hover { color: var(--accent2); }
 
-/* Glassmorphism base */
 .glass {
   background: var(--glass);
   border: 1px solid var(--border);
@@ -52,10 +43,7 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-/* Neon glow */
-.glow {
-  box-shadow: 0 0 16px rgba(0,212,255,0.4);
-}
+.glow { box-shadow: 0 0 16px rgba(0,212,255,0.4); }
 
 /* HERO */
 .hero {
@@ -78,10 +66,7 @@ a:hover {
   right: -120px;
   z-index: -1;
 }
-.subtitle {
-  opacity: 0.9;
-  margin-bottom: 25px;
-}
+.subtitle { opacity: 0.9; margin-bottom: 25px; }
 
 .typing {
   color: var(--accent);
@@ -100,10 +85,7 @@ a:hover {
   font-weight: 600;
   transition: 0.25s;
 }
-.btn:hover {
-  background: var(--accent2);
-  color: #fff;
-}
+.btn:hover { background: var(--accent2); color: #fff; }
 
 /* Floating Contact Button */
 .floating-contact {
@@ -124,16 +106,6 @@ a:hover {
   transition: transform 0.2s;
 }
 .floating-contact:hover { transform: scale(1.08); }
-
-/* Social Icons */
-.social-icons a {
-  font-size: 1.6rem;
-  margin: 10px;
-  color: var(--accent);
-}
-.social-icons a:hover {
-  color: var(--accent2);
-}
 
 /* NAVBAR */
 .navbar {
@@ -168,21 +140,12 @@ a:hover {
   background: var(--accent);
   transition: width 0.25s;
 }
-.nav-container a:hover::after {
-  width: 100%;
-}
+.nav-container a:hover::after { width: 100%; }
 
 /* Sections */
-.section {
-  padding: 80px 20px;
-}
-.dark {
-  background: #1a1a1a;
-}
-.muted {
-  opacity: 0.65;
-  margin-bottom: 20px;
-}
+.section { padding: 80px 20px; }
+.dark { background: #1a1a1a; }
+.muted { opacity: 0.65; margin-bottom: 20px; }
 
 /* Skills */
 .skill-list {
@@ -200,17 +163,14 @@ a:hover {
   align-items: center;
   gap: 10px;
 }
-.skill i {
-  font-size: 1.8rem;
-  color: var(--accent);
-}
+.skill i { font-size: 1.8rem; color: var(--accent); }
 .skill:hover {
   transform: translateY(-4px);
   background: rgba(0,212,255,0.06);
   border-color: rgba(0,212,255,0.18);
 }
 
-/* Overlay for skill showcase */
+/* Overlay */
 .overlay {
   position: fixed;
   inset: 0;
@@ -271,7 +231,7 @@ a:hover {
 .slider-btn.left { left: 10px; }
 .slider-btn.right { right: 10px; }
 
-/* HTML/CSS links grid */
+/* Links grid */
 .link-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -285,10 +245,7 @@ a:hover {
   transition: 0.22s;
   background: rgba(255,255,255,0.02);
 }
-.link-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(0,212,255,0.3);
-}
+.link-card:hover { transform: translateY(-4px); border-color: rgba(0,212,255,0.3); }
 .link-card img {
   width: 100%;
   height: 160px;
@@ -297,7 +254,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-/* Image carousel */
+/* Carousel */
 .image-carousel {
   position: relative;
   display: flex;
@@ -312,11 +269,7 @@ a:hover {
 }
 
 /* JS demo */
-.js-demo {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 800px;
-}
+.js-demo { text-align: left; margin: 0 auto; max-width: 800px; }
 .demo-box {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -331,10 +284,10 @@ a:hover {
   transform: translateY(20px);
   transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.fade-in.visible {
-  opacity: 1;
-  transform: none;
-}
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* Fallback: Show content even if JS fails */
+.no-js .fade-in { opacity: 1; transform: none; }
 
 footer {
   background: #111;
