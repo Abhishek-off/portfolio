@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm <span class="highlight">Abhishek</span></h1>
-    <p>Aspiring Developer | Tech Enthusiast</p>
-    <a href="#contact" class="btn">Contact Me</a>
+  <header class="hero">
+    <div class="container">
+      <h1 class="fade-in">Hi, I'm <span class="highlight">Abhishek</span></h1>
+      <p class="fade-in delay">Aspiring Developer | Tech Enthusiast</p>
+      <a href="#contact" class="btn fade-in delay2">Contact Me</a>
+    </div>
   </header>
 
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a student at PES College, passionate about coding, gaming, and advanced rendering.</p>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a student at PES College, passionate about coding, gaming, and advanced rendering in After Effects.
+        I enjoy solving problems, building creative projects, and learning new technologies.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="dark">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">C / C++</div>
+        <div class="skill">DBMS (MariaDB, XAMPP)</div>
+        <div class="skill">After Effects</div>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>🎬 Movie Booking System</h3>
-      <p>A DBMS project using XAMPP and MariaDB.</p>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>🎬 Movie Booking System</h3>
+        <p>DBMS project implemented using XAMPP and MariaDB.</p>
+      </div>
+      <div class="project-card">
+        <h3>🎮 Game Development</h3>
+        <p>Experimenting with game mechanics and graphics rendering.</p>
+      </div>
     </div>
-    <!-- Add more projects here -->
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+  <section id="contact" class="dark">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Abhishek. All rights reserved.</p>
+    <p>&copy; 2025 Abhishek. Built with ❤️</p>
   </footer>
 </body>
 </html>
