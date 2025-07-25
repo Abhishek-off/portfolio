@@ -43,8 +43,9 @@ const showcases = {
     type: 'videoSlider',
     title: 'After Effects Renders',
     items: [
-      "https://www.w3schools.com/html/mov_bbb.mp4",
-      "https://www.w3schools.com/html/movie.mp4"
+      "videos/ae1.mp4",
+      "videos/ae2.mp4",
+      "videos/ae3.mp4"
     ]
   },
   htmlcss: {
