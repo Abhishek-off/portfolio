@@ -5,28 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HERO -->
   <header class="hero">
     <div class="container">
-      <h1 class="fade-in">Hi, I'm <span class="highlight">Abhishek</span></h1>
-      <p class="fade-in delay">Aspiring Developer | Tech Enthusiast</p>
-      <a href="#contact" class="btn fade-in delay2">Contact Me</a>
+      <h1>Hi, I'm <span class="typing"></span></h1>
+      <p>Aspiring Developer | Tech Enthusiast</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <a href="#skills" class="btn">View My Skills</a>
     </div>
   </header>
 
+  <!-- NAV -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
@@ -37,43 +45,38 @@
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills" class="dark">
     <div class="container">
       <h2>Skills</h2>
       <div class="skill-list">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">C / C++</div>
-        <div class="skill">DBMS (MariaDB, XAMPP)</div>
-        <div class="skill">After Effects</div>
+        <div class="skill" data-video="videos/aftereffects.mp4">After Effects</div>
+        <div class="skill" data-video="videos/dbms.mp4">DBMS</div>
+        <div class="skill" data-video="videos/htmlcss.mp4">HTML/CSS</div>
+        <div class="skill" data-video="videos/javascript.mp4">JavaScript</div>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>🎬 Movie Booking System</h3>
-        <p>DBMS project implemented using XAMPP and MariaDB.</p>
-      </div>
-      <div class="project-card">
-        <h3>🎮 Game Development</h3>
-        <p>Experimenting with game mechanics and graphics rendering.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="dark">
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Abhishek. Built with ❤️</p>
   </footer>
+
+  <!-- VIDEO MODAL -->
+  <div id="videoModal" class="modal">
+    <span class="close">&times;</span>
+    <video controls autoplay muted></video>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
