@@ -11,17 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Floating Contact Button -->
+  <a href="#contact" class="floating-contact"><i class="fas fa-paper-plane"></i></a>
+
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero glass fade-in">
     <div class="container">
       <h1>Hi, I'm <span class="typing"></span></h1>
-      <p>Aspiring Developer | Tech Enthusiast</p>
+      <p class="subtitle">Aspiring Developer • Tech Enthusiast</p>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your-email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
-      <a href="#skills" class="btn">View My Skills</a>
+      <a href="#skills" class="btn glow">View My Skills</a>
     </div>
   </header>
 
@@ -35,7 +38,7 @@
   </nav>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="section fade-in">
     <div class="container">
       <h2>About Me</h2>
       <p>
@@ -46,20 +49,33 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="dark">
+  <section id="skills" class="section dark fade-in">
     <div class="container">
       <h2>Skills</h2>
+      <p class="muted">Each skill opens a unique, custom showcase ✨</p>
       <div class="skill-list">
-        <div class="skill" data-video="videos/aftereffects.mp4">After Effects</div>
-        <div class="skill" data-video="videos/dbms.mp4">DBMS</div>
-        <div class="skill" data-video="videos/htmlcss.mp4">HTML/CSS</div>
-        <div class="skill" data-video="videos/javascript.mp4">JavaScript</div>
+        <div class="skill glass" data-skill="ae">
+          <i class="fas fa-video"></i>
+          <span>After Effects</span>
+        </div>
+        <div class="skill glass" data-skill="htmlcss">
+          <i class="fab fa-html5"></i>
+          <span>HTML / CSS</span>
+        </div>
+        <div class="skill glass" data-skill="dbms">
+          <i class="fas fa-database"></i>
+          <span>DBMS</span>
+        </div>
+        <div class="skill glass" data-skill="javascript">
+          <i class="fab fa-js-square"></i>
+          <span>JavaScript</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact">
+  <section id="contact" class="section fade-in">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
@@ -67,14 +83,16 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="fade-in">
     <p>&copy; 2025 Abhishek. Built with ❤️</p>
   </footer>
 
-  <!-- VIDEO MODAL -->
-  <div id="videoModal" class="modal">
-    <span class="close">&times;</span>
-    <video controls autoplay muted></video>
+  <!-- UNIVERSAL SKILL OVERLAY -->
+  <div id="skillOverlay" class="overlay">
+    <div class="overlay-content glass">
+      <button class="overlay-close" aria-label="Close">&times;</button>
+      <div id="overlayInner"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
