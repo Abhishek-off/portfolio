@@ -236,3 +236,99 @@ footer {
   box-shadow: var(--shadow);
   z-index: 999;
 }
+
+/* Hide desktop nav on small screens */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-nav .nav-scroll {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+  }
+
+  .mobile-nav a {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+  }
+
+  .mobile-nav a:hover {
+    background: var(--accent);
+    color: black;
+  }
+}
+
+/* Hide mobile nav on desktop */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* Hide mobile nav on desktop, show desktop nav */
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* Show mobile nav on smaller screens */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: #111;
+    padding: 10px 0;
+  }
+
+  .mobile-nav .nav-scroll {
+    display: flex;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .mobile-nav a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    white-space: nowrap;
+  }
+
+  .mobile-nav a:hover {
+    background: var(--accent);
+    color: #000;
+  }
+}
+

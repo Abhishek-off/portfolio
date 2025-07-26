@@ -7,8 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
   <link href="style.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
@@ -32,12 +30,24 @@
 
   <!-- NAV -->
   <nav class="navbar">
-    <div class="nav-container">
+    <!-- Desktop Nav -->
+    <div class="nav-container desktop-nav">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#gallery">Gallery</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Mobile Tab Slider -->
+    <div class="mobile-nav">
+      <div class="nav-scroll">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
@@ -65,7 +75,7 @@
     </div>
   </section>
 
-    <!-- RESUME -->
+  <!-- RESUME -->
   <section id="resume" class="fade-in">
     <div class="container">
       <h2>My Resume</h2>
@@ -99,7 +109,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- CONTACT -->
   <section id="contact" class="fade-in">
