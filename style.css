@@ -211,9 +211,10 @@ footer {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.7s ease-in-out;
+  transform: translateY(10px);
+  transition: all 0.4s ease-out;
 }
+
 .fade-in.visible {
   opacity: 1;
   transform: none;
@@ -331,4 +332,202 @@ footer {
     color: #000;
   }
 }
+
+/* AE Modal Base */
+.ae-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+.ae-modal-content {
+  background: #111;
+  padding: 20px;
+  max-width: 900px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00d4ff;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.ae-modal-content h2 {
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.ae-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.ae-videos {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.ae-videos video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  border: 2px solid var(--accent);
+}
+
+/* AE Modal Base */
+.ae-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+.ae-modal.show {
+  display: flex;
+}
+
+.ae-modal-content {
+  background: #111;
+  padding: 20px;
+  max-width: 900px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00d4ff;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.ae-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.ae-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.ae-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.ae-slide {
+  min-width: 100%;
+  scroll-snap-align: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.ae-slide video {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+}
+
+.ae-info {
+  margin-top: 10px;
+  text-align: center;
+}
+.ae-info h3 {
+  margin: 6px 0 4px;
+  color: var(--accent);
+}
+.ae-info p {
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+
+/* Responsive Toggle */
+.ae-videos.mobile { display: none; }
+
+@media (max-width: 768px) {
+  .ae-videos.desktop { display: none; }
+  .ae-videos.mobile { display: flex; }
+}
+
+.ae-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.ae-nav i {
+  font-size: 1.2rem;
+}
+
+.ae-nav:hover {
+  box-shadow: 0 0 14px rgba(0, 212, 255, 0.5);
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.ae-prev {
+  left: 12px;
+}
+
+.ae-next {
+  right: 12px;
+}
+
+
+.ae-dot.active {
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+
+/* For swipe hint on mobile */
+@media (max-width: 768px) {
+  .ae-carousel {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+  }
+  .ae-slide {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
+
+
 

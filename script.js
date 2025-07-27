@@ -83,3 +83,72 @@ particlesJS("particles-js", {
   },
   retina_detect: true
 });
+
+// AE Modal Logic
+const aeCard = document.querySelector('.skill-card:nth-child(1)');
+const aeModal = document.getElementById('aeModal');
+const aeClose = document.querySelector('.ae-close');
+
+aeCard.addEventListener('click', () => {
+  aeModal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+});
+
+aeClose.addEventListener('click', () => {
+  aeModal.classList.remove('show');
+  document.body.style.overflow = '';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === aeModal) {
+    aeModal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+});
+
+// Carousel navigation logic
+const aeCarousel = document.querySelector('.ae-carousel');
+const aeSlides = document.querySelectorAll('.ae-slide');
+const aeTitle = document.getElementById('aeTitle');
+const aeDesc = document.getElementById('aeDesc');
+
+let aeCurrentIndex = 0;
+
+function updateCarousel() {
+  aeCarousel.style.transform = `translateX(-${aeCurrentIndex * 100}%)`;
+
+  const active = aeSlides[aeCurrentIndex];
+  aeTitle.textContent = active.dataset.title || 'Render';
+  aeDesc.textContent = active.dataset.desc || '';
+}
+
+document.querySelector('.ae-next').addEventListener('click', () => {
+  aeCurrentIndex = (aeCurrentIndex + 1) % aeSlides.length;
+  updateCarousel();
+});
+
+document.querySelector('.ae-prev').addEventListener('click', () => {
+  aeCurrentIndex = (aeCurrentIndex - 1 + aeSlides.length) % aeSlides.length;
+  updateCarousel();
+});
+
+// Play intro audio once per session on first interaction
+window.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("introAudio");
+
+  // Prevent re-playing if already played this session
+  if (!sessionStorage.getItem("introPlayed")) {
+    const playIntro = () => {
+      audio.play().catch(err => {
+        console.warn("Audio play failed:", err);
+      });
+      sessionStorage.setItem("introPlayed", "true");
+      window.removeEventListener("click", playIntro);
+      window.removeEventListener("touchstart", playIntro);
+    };
+
+    // Wait for user interaction
+    window.addEventListener("click", playIntro);
+    window.addEventListener("touchstart", playIntro);
+  }
+});

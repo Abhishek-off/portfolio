@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek - Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
@@ -12,6 +14,58 @@
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
+
+<!-- AE Video Modal (Hidden by Default) -->
+<div id="aeModal" class="ae-modal">
+  <div class="ae-modal-content">
+    <span class="ae-close">&times;</span>
+    <h2>After Effects Renders</h2>
+
+    <div class="ae-carousel-wrapper">
+      <div class="ae-carousel">
+        <div class="ae-slide" data-title="Render 1" data-desc="3D Logo Animation">
+          <video src="videos/ae1.mp4" controls muted></video>
+        </div>
+        <div class="ae-slide" data-title="Render 2" data-desc="VFX Portal Sequence">
+          <video src="videos/ae2.mp4" controls muted></video>
+        </div>
+        <div class="ae-slide" data-title="Render 3" data-desc="Motion Title Reveal">
+          <video src="videos/ae3.mp4" controls muted></video>
+        </div>
+      </div>
+
+
+      <div class="ae-carousel-wrapper">
+  <div class="ae-carousel">
+    <!-- ...slides... -->
+  </div>
+
+  <div class="ae-info">
+    <h3 id="aeTitle">Render 1</h3>
+    <p id="aeDesc">3D Logo Animation</p>
+  </div>
+
+<!-- Navigation Buttons -->
+<button class="ae-nav ae-prev" aria-label="Previous">
+  <i class="fas fa-chevron-left"></i>
+</button>
+<button class="ae-nav ae-next" aria-label="Next">
+  <i class="fas fa-chevron-right"></i>
+</button>
+
+
+
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+<audio id="introAudio" src="audio/intro.mp3" preload="auto"></audio>
+
+
+
 <body>
   <div id="particles-js"></div>
 
